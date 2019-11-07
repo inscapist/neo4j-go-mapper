@@ -12,6 +12,28 @@ Usage:
 - get back values and cast them back into the required types
 ```
 
+## Interface
+
+```go
+type Mapper interface {
+	Ping() error
+	Exec(cypher string, params map[string]interface{}) error
+	Query(
+		cypher string,
+		params map[string]interface{},
+		transform func(record neo4j.Record) interface{},
+	) ([]interface{}, error)
+	QuerySingle(
+		cypher string,
+		params map[string]interface{},
+		transform func(record neo4j.Record) interface{},
+	) (interface{}, error)
+	Close() error
+
+	ReadSingleRow(cypher string, params map[string]interface{}, blankTypes ...interface{}) ([]interface{}, error)
+	ReadRows(cypher string, params map[string]interface{}, blankTypes ...interface{}) ([][]interface{}, error)
+}
+```
 
 ## Installation
 ```
