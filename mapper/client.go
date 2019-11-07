@@ -8,7 +8,7 @@ type Client struct {
 	driver neo4j.Driver
 }
 
-func NewClient(uri, user, password string) (*Client, error) {
+func NewClient(uri, user, password string) (Mapper, error) {
 	driver, err := neo4j.NewDriver(uri, neo4j.BasicAuth(user, password, ""))
 	if err != nil {
 		return nil, err
@@ -113,6 +113,15 @@ func (c *Client) QuerySingle(
 		return nil, err
 	}
 	return item, nil
+}
+
+func (g *Client) Bootstrap(cypherStmts []string) error {
+	for _, stmt := range cypherStmts {
+		if err := g.Exec(stmt, nil); err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 func (c *Client) Close() error {

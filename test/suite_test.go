@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	client *mapper.Client
+	client mapper.Mapper
 	err    error
 )
 
