@@ -22,7 +22,7 @@ func TestGraphDB(t *testing.T) {
 	if err = client.Ping(); err != nil {
 		t.Fatal(err)
 	}
-	RunSpecs(t, "GraphDB Suite")
+	RunSpecs(t, "Examples Suite")
 	if err = client.Close(); err != nil {
 		t.Fatal("unable to perform database tear down")
 	}

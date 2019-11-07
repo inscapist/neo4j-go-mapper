@@ -55,5 +55,5 @@ var _ = Describe("scanMapToStruct", func() {
 
 func TestBuilder(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "internal suite")
+	RunSpecs(t, "Builder (internal)")
 }
