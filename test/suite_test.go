@@ -5,7 +5,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"gitlab.com/sagittaros/neo4j-go-mapper/mapper"
+	"github.com/sagittaros/neo4j-go-mapper/mapper"
 )
 
 var (
