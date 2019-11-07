@@ -1,9 +1,9 @@
-// Package graphdb makes heavy use of `reflect` to construct values out of specified types (an empty, initialized value of a type).
+// Package mapper makes heavy use of `reflect` to construct values out of specified types (an empty, initialized value of a type).
 // This makes it easy to read arbitrary values from neo4j client.
 // Usage:
 // 		- pass empty, initialized type(s) as the last argument(s) of `ReadSingleRow` and `ReadSingleRow`
 // 		- get back values and cast them back into the required types
-package graphdb
+package mapper
 
 import (
 	"errors"

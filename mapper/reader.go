@@ -1,4 +1,4 @@
-package graphdb
+package mapper
 
 func (c *Client) ReadSingleRow(cypher string, params map[string]interface{}, blankTypes ...interface{}) ([]interface{}, error) {
 	row, err := c.QuerySingle(cypher, params, convertRecordToTypesFunc(blankTypes))

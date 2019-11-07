@@ -1,4 +1,4 @@
-module gitlab.com/intelllex/graphdb
+module gitlab.com/intelllex/mapper
 
 go 1.13
 

@@ -1,4 +1,4 @@
-package graphdb
+package mapper
 
 import (
 	"testing"
@@ -55,5 +55,5 @@ var _ = Describe("scanMapToStruct", func() {
 
 func TestBuilder(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "GraphDB/Internal Suite")
+	RunSpecs(t, "internal suite")
 }
