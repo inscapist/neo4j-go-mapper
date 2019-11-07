@@ -1,4 +1,4 @@
-module gitlab.com/intelllex/neo4j-go-mapper
+module gitlab.com/sagittaros/neo4j-go-mapper
 
 go 1.13
 
