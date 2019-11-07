@@ -1,4 +1,4 @@
-module gitlab.com/intelllex/mapper
+module gitlab.com/intelllex/neo4j-go-mapper
 
 go 1.13
 
